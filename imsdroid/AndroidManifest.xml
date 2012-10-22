@@ -47,6 +47,11 @@
         <activity android:name=".Screens.ScreenFileTransferView"></activity>
         <activity android:name=".Screens.ScreenAVQueue"></activity>
         <activity android:name=".Screens.ScreenChatQueue"></activity>
+        <!-- added by mabin for VideoRecorder -->
+        <activity android:name=".Screens.ScreenVideoRecorder">
+        </activity>
+        <activity android:name=".Screens.ScreenRecorderSettings">
+        </activity>
         
 
     </application>

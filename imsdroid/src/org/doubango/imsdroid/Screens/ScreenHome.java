@@ -108,7 +108,13 @@ public class ScreenHome extends BaseScreen {
 									}
 								});
 					}
-					else{					
+					else if(position == ScreenHomeItem.ITEM_VIDEO_RECORDER) {
+						Intent intent = new Intent();
+						intent.setClass(ScreenHome.this, ScreenVideoRecorder.class);
+						startActivity(intent);
+					}
+					else{
+						Log.d(TAG, "show " + item.mClass.getCanonicalName());
 						mScreenService.show(item.mClass, item.mClass.getCanonicalName());
 					}
 				}
@@ -189,6 +195,7 @@ public class ScreenHome extends BaseScreen {
 	static class ScreenHomeItem {
 		static final int ITEM_SIGNIN_SIGNOUT_POS = 0;
 		static final int ITEM_EXIT_POS = 1;
+		static final int ITEM_VIDEO_RECORDER = 3;
 		final int mIconResId;
 		final String mText;
 		final Class<? extends Activity> mClass;
@@ -204,18 +211,21 @@ public class ScreenHome extends BaseScreen {
 	 * ScreenHomeAdapter
 	 */
 	static class ScreenHomeAdapter extends BaseAdapter{
-		static final int ALWAYS_VISIBLE_ITEMS_COUNT = 4;
+		//modified by mabin for VideoRecorder.
+		static final int ALWAYS_VISIBLE_ITEMS_COUNT = 5;
 		static final ScreenHomeItem[] sItems =  new ScreenHomeItem[]{
 			// always visible
     		new ScreenHomeItem(R.drawable.sign_in_48, "Sign In", null),
     		new ScreenHomeItem(R.drawable.exit_48, "Exit/Quit", null),
     		new ScreenHomeItem(R.drawable.options_48, "Options", ScreenSettings.class),
-    		new ScreenHomeItem(R.drawable.about_48, "About", ScreenAbout.class),
+    		//added by mabin for VideoRecorder.
+    		new ScreenHomeItem(R.drawable.video_recorder_48, "Video Recorder", ScreenVideoRecorder.class),
+    		new ScreenHomeItem(R.drawable.about_48, "About", ScreenAbout.class),	
     		// visible only if connected
     		new ScreenHomeItem(R.drawable.dialer_48, "Dialer", ScreenTabDialer.class),
     		new ScreenHomeItem(R.drawable.eab2_48, "Address Book", ScreenTabContacts.class),
     		new ScreenHomeItem(R.drawable.history_48, "History", ScreenTabHistory.class),
-    		new ScreenHomeItem(R.drawable.chat_48, "Messages", ScreenTabMessages.class),
+    		new ScreenHomeItem(R.drawable.chat_48, "Messages", ScreenTabMessages.class)
 		};
 		
 		private final LayoutInflater mInflater;

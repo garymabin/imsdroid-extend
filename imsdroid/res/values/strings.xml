@@ -39,6 +39,7 @@
     <string name="string_call_incoming">Incoming Call</string>
     <string name="string_call_outgoing">Outgoing Call</string>
     <string name="string_call_cancelled">Call cancelled</string>
+    <string name ="recorder_settings">Recorder Settings</string>
     <!-- Colors -->
     <color name="color_black">#000000</color>
     <color name="color_white">#FFFFFF</color>

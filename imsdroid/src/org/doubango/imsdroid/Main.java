@@ -29,6 +29,7 @@ import org.doubango.imsdroid.Screens.ScreenFileTransferQueue;
 import org.doubango.imsdroid.Screens.ScreenHome;
 import org.doubango.imsdroid.Screens.ScreenSplash;
 import org.doubango.imsdroid.Screens.ScreenTabMessages;
+import org.doubango.imsdroid.Screens.ScreenVideoRecorder;
 import org.doubango.imsdroid.Services.IScreenService;
 import org.doubango.ngn.sip.NgnAVSession;
 import org.doubango.ngn.utils.NgnPredicate;

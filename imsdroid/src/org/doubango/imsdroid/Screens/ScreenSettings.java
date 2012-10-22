@@ -90,6 +90,7 @@ public class ScreenSettings extends BaseScreen {
     		new ScreenSettingsItem(R.drawable.messaging_48, "Messaging", ScreenMessaging.class),
     		new ScreenSettingsItem(R.drawable.qos_qoe_48, "QoS/QoE", ScreenQoS.class),
     		new ScreenSettingsItem(R.drawable.natt_48, "NATT", ScreenNatt.class),
+    		new ScreenSettingsItem(R.drawable.video_recorder_settings_48, "Recorder Settings", ScreenRecorderSettings.class)
 		};
 		
 		private final LayoutInflater mInflater;
